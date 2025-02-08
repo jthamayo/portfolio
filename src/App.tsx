@@ -1,15 +1,24 @@
 //import { useState } from 'react'
+import Contact from "./components/contact/Contact";
+import Hero from "./components/hero/Hero";
+import TechStack from "./components/techStack/TechStack";
+import Toolbox from "./components/toolbox/Toolbox";
+import ProjectShowcase from "./components/projectShowcase/ProjectShowcase";
 
-import './App.css'
+import "./App.css";
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Hero />
+      <Contact />
+      <TechStack />
+      <Toolbox />
+      <ProjectShowcase />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
