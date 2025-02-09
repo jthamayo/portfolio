@@ -3,8 +3,8 @@ import { techData } from "../../data/techData";
 const TechStack = () => {
   return (
     <>
-      <section>
-        <h3>Tech Stack</h3>
+      <section className="m-10">
+        <h3 className="text-3xl">Tech Stack</h3>
         <ul>
           {techData.map((tech, index) => {
             return (

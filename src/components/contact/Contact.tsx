@@ -6,8 +6,8 @@ import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
 const Contact = () => {
   return (
     <>
-      <section>
-        <h5>Contact</h5>
+      <section className="m-10">
+        <h3 className="text-3xl">Contact</h3>
         <div className="grid text-lg grid-cols-2 w-2xs gap-2">
           <div className="flex items-center">
             <img src={locationIcon} alt="Location" className="size-7" />

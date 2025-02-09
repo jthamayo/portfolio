@@ -3,7 +3,8 @@ import { projectData } from "../../data/projectData";
 
 const ProjectShowcase = () => {
   return (
-    <>
+    <section className="m-10">
+      <h3 className="text-3xl">Featured Projects</h3>
       <ol>
         {projectData.map((project, index) => {
           return (
@@ -19,7 +20,7 @@ const ProjectShowcase = () => {
           );
         })}
       </ol>
-    </>
+    </section>
   );
 };
 
