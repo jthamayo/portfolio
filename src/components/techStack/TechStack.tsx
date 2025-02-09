@@ -7,7 +7,12 @@ const TechStack = () => {
         <h3>Tech Stack</h3>
         <ul>
           {techData.map((tech, index) => {
-            return <li key={index}>{tech.name}</li>;
+            return (
+              <li key={index}>
+                <i className={`${tech.logo}text-slate-600`}></i>
+                {tech.name}
+              </li>
+            );
           })}
         </ul>
       </section>
