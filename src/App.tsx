@@ -1,5 +1,4 @@
 //import { useState } from 'react'
-import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
 import TechStack from "./components/techStack/TechStack";
 import Toolbox from "./components/toolbox/Toolbox";
@@ -13,10 +12,11 @@ function App() {
   return (
     <>
       <Hero />
-      <Contact />
-      <TechStack />
-      <Toolbox />
-      <ProjectShowcase />
+      <main className="px-40">
+        <TechStack />
+        <Toolbox />
+        <ProjectShowcase />
+      </main>
     </>
   );
 }

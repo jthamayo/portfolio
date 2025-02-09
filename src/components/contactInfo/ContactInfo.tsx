@@ -3,26 +3,25 @@ import gmailIcon from "../../assets/gmail.svg";
 import githubIcon from "../../assets/github.svg";
 import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
 
-const Contact = () => {
+const ContactInfo = () => {
   return (
     <>
-      <section className="m-10">
-        <h3 className="text-3xl">Contact</h3>
-        <div className="grid text-lg grid-cols-2 w-2xs gap-2">
-          <div className="flex items-center">
-            <img src={locationIcon} alt="Location" className="size-7" />
+      <section className="text-sm">
+        <div className="flex justify-between gap-2 py-10">
+          <div className="flex items-center gap-x-1">
+            <img src={locationIcon} alt="Location" className="size-5" />
             <p>Seville, Spain</p>
           </div>
           <div className="flex items-center gap-x-1">
-            <img src={gmailIcon} alt="Gmail" className="size-7" />
+            <img src={gmailIcon} alt="Gmail" className="size-5" />
             <p>jtamayobalogh@gmail.com</p>
           </div>
           <div className="flex items-center gap-x-1">
-            <img src={githubIcon} alt="GitHub" className="size-7" />
+            <img src={githubIcon} alt="GitHub" className="size-5" />
             <p>jthamayo</p>
           </div>
           <div className="flex items-center gap-x-1">
-            <img src={linkedinIcon} alt="LinkedIn" className="size-7" />
+            <img src={linkedinIcon} alt="LinkedIn" className="size-5" />
             <p>LinkedIn</p>
           </div>
         </div>
@@ -31,4 +30,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactInfo;
