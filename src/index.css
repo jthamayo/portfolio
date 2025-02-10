@@ -3,6 +3,15 @@
 
 @theme {
   --font-base: "Inconsolata", "Antic", "Roboto Mono", monospace;
+  --animate-popup: pop 0.3s ease-in-out;
+  @keyframes pop {
+    0% {
+      transform: translateY(50px) scale(0.65);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
 :root {

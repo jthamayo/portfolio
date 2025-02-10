@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Hero />
-      <main className="px-40">
+      <main className="mx-1 sm:mx-10 md:mx-20 lg:mx-50 xl:mx-70">
         <TechStack />
         <Toolbox />
         <ProjectShowcase />
