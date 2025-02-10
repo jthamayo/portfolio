@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+import Project from "../project/Project";
 import { projectData } from "../../data/projectData";
 
 const ProjectShowcase = () => {
@@ -9,7 +9,7 @@ const ProjectShowcase = () => {
         {projectData.map((project, index) => {
           return (
             <li key={index}>
-              <Card
+              <Project
                 title={project.title}
                 subtitle={project.subtitle}
                 cover={project.cover}
