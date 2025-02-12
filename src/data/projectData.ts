@@ -47,7 +47,7 @@ export const projectData = [
   },
   {
     title: "Project 5",
-    subtitle: "Mock Project 6",
+    subtitle: "Mock Project 5",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ex sed nunc consequat auctor. Suspendisse blandit ligula volutpat luctus efficitur. Donec magna ipsum, convallis vel consequat ut, bibendum vel turpis. Mauris vitae turpis leo. In hac habitasse platea dictumst. Vivamus mi nibh, tincidunt eu feugiat eget, ultrices vitae eros. Mauris in sem pellentesque, tincidunt felis id, tristique ante. Pellentesque vitae quam a enim eleifend vehicula. Quisque quis volutpat massa, non lobortis nulla. ",
     cover: [
