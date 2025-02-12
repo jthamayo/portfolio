@@ -1,4 +1,3 @@
-//import { useState, useEffect } from "react";
 import gmailIcon from "../../assets/gmail.svg";
 import githubIcon from "../../assets/github.svg";
 import houseIcon from "../../assets/house-solid.svg";
@@ -6,9 +5,11 @@ import stackIcon from "../../assets/layer-group-solid.svg";
 import codeIcon from "../../assets/code-solid.svg";
 import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
 import { useState } from "react";
+import useScrollStatus from "../../hooks/useScrollStatus";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const isScrolled = useScrollStatus();
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -16,9 +17,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed bg-white h-screen w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all ${
-        isOpen ? "-translate-y-1/2" : "-translate-x-61"
-      }`}
+      className={`fixed bg-white h-screen w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all duration-500
+         ${isScrolled? isOpen ? "-translate-y-1/2" : "-translate-x-61" : "-translate-x-100"}`}
     >
       <div
         className={`h-6 w-7 top-4 right-4 absolute flex flex-col gap-2 ${
@@ -44,8 +44,8 @@ const Navbar = () => {
       </div>
       <div className="flex h-screen w-full flex-col justify-center gap-5">
         <header
-          className={`h-1/3 text-4xl flex text-center items-end ${
-            isOpen ? "" : "mr-15"
+          className={`h-1/3 text-4xl flex text-center items-end transition-all duration-300 ${
+            isOpen ? "" : "scale-x-80"
           }`}
         >
           <h3 className="font-normal w-full uppercase">Judith Tamayo</h3>
