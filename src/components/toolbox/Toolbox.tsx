@@ -3,7 +3,7 @@ import { toolData } from "../../data/toolData";
 const Toolbox = () => {
   return (
     <>
-      <section className="m-10 py-10">
+      <section className="m-10 pt-10">
         <h3 className="text-4xl my-5 tracking-widest uppercase font-light">Tools</h3>
         <ul className="flex flex-wrap gap-4 justify-stretch shadow-md p-4 rounded-md text-md">
           {toolData.map((tool, index) => {

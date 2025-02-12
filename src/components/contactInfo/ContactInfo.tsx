@@ -6,8 +6,8 @@ import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
 const ContactInfo = () => {
   return (
     <>
-      <section className="text-md">
-        <div className="text-nowrap">
+      <section className="text-md h-full">
+        <div className="text-nowrap h-full flex flex-col justify-around">
           <div className="flex items-center gap-x-1">
             <img src={locationIcon} alt="Location" className="size-5" />
             <p>Seville, Spain</p>

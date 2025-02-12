@@ -5,11 +5,43 @@ import houseIcon from "../../assets/house-solid.svg";
 import stackIcon from "../../assets/layer-group-solid.svg";
 import codeIcon from "../../assets/code-solid.svg";
 import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
+import { useState } from "react";
 
-const Navbar = ({displacement}:{displacement:number}) => {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div className="fixed h-screen w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg">
+    <div
+      className={`fixed bg-white h-screen w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all ${
+        isOpen ? "-translate-y-1/2" : "-translate-x-61"
+      }`}
+    >
+      <div
+        className={`h-6 w-7 top-4 right-4 absolute flex flex-col gap-2 ${
+          isOpen ? " " : ""
+        }`}
+        onClick={handleOpen}
+      >
+        <span
+          className={`w-full h-0.5 bg-slate-800 transition-all ${
+            isOpen ? "rotate-45 translate-y-2.5" : "rotate-0 translate-y-0"
+          }`}
+        ></span>
+        <span
+          className={`w-full h-0.5 bg-slate-800 transition-all ${
+            isOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`w-full h-0.5 bg-slate-800 transition-all ${
+            isOpen ? "-rotate-45 -translate-y-2.5" : "rotate-0 translate-y-0"
+          }`}
+        ></span>
+      </div>
       <div className="flex h-screen w-full flex-col justify-center gap-5 py-10">
         <div className="text-4xl flex-inline w-full h-[25%] text-nowrap text-center">
           <h3 className="font-light uppercase">Judith Tamayo</h3>
@@ -18,19 +50,19 @@ const Navbar = ({displacement}:{displacement:number}) => {
           <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
             <p>Full</p>
             <a href="#home">
-              <img src={houseIcon} alt="Home" className="size-5" />
+              <img src={houseIcon} alt="Home" className="size-6" />
             </a>
           </li>
           <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
             <p>Stack</p>
             <a href="#stack">
-              <img src={stackIcon} alt="Stacks" className="size-5" />
+              <img src={stackIcon} alt="Stacks" className="size-6" />
             </a>
           </li>
           <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
             <p>Developer</p>
             <a href="#project">
-              <img src={codeIcon} alt="Projects" className="size-5" />
+              <img src={codeIcon} alt="Projects" className="size-6" />
             </a>
           </li>
         </ul>
