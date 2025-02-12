@@ -8,7 +8,7 @@ import linkedinIcon from "../../assets/linkedin-brands-solid.svg";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -42,41 +42,58 @@ const Navbar = () => {
           }`}
         ></span>
       </div>
-      <div className="flex h-screen w-full flex-col justify-center gap-5 py-10">
-        <div className="text-4xl flex-inline w-full h-[25%] text-nowrap text-center">
-          <h3 className="font-light uppercase">Judith Tamayo</h3>
-        </div>
-        <ul className="flex flex-col justify-center gap-2 h-[50%] text-start text-2xl font-extralight uppercase w-full">
-          <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
-            <p>Full</p>
-            <a href="#home">
-              <img src={houseIcon} alt="Home" className="size-6" />
+      <div className="flex h-screen w-full flex-col justify-center gap-5">
+        <header
+          className={`h-1/3 text-4xl flex text-center items-end ${
+            isOpen ? "" : "mr-15"
+          }`}
+        >
+          <h3 className="font-normal w-full uppercase">Judith Tamayo</h3>
+        </header>
+        <nav>
+          <ul className="flex flex-col justify-center gap-2 text-start text-2xl font-extralight uppercase w-full">
+            <li className="border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
+              <a href="#home" className="p-4 flex items-center justify-between">
+                <p>Full</p>
+                <img src={houseIcon} alt="Home" className="size-6" />
+              </a>
+            </li>
+            <li className="border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
+              <a
+                href="#stack"
+                className="p-4 flex items-center justify-between "
+              >
+                <p>Stack</p>
+                <img src={stackIcon} alt="Stacks" className="size-6" />
+              </a>
+            </li>
+            <li className="border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
+              <a
+                href="#project"
+                className="p-4 flex items-center justify-between"
+              >
+                <p>Developer</p>
+                <img src={codeIcon} alt="Projects" className="size-6" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer className="w-full mt-auto">
+          <div className="flex items-end justify-center gap-10 w-full">
+            <a href="">
+              <img src={gmailIcon} alt="Gmail" className="size-5" />
             </a>
-          </li>
-          <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
-            <p>Stack</p>
-            <a href="#stack">
-              <img src={stackIcon} alt="Stacks" className="size-6" />
+            <a href="">
+              <img src={githubIcon} alt="Gmail" className="size-5" />
             </a>
-          </li>
-          <li className="p-4 flex items-center justify-between border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
-            <p>Developer</p>
-            <a href="#project">
-              <img src={codeIcon} alt="Projects" className="size-6" />
+            <a href="">
+              <img src={linkedinIcon} alt="Gmail" className="size-5" />
             </a>
-          </li>
-        </ul>
-        <div className="flex items-end h-[25%] justify-center gap-10 w-full">
-          <a href="">
-            <img src={gmailIcon} alt="Gmail" className="size-5" />
-          </a>
-          <a href="">
-            <img src={githubIcon} alt="Gmail" className="size-5" />
-          </a>
-          <a href="">
-            <img src={linkedinIcon} alt="Gmail" className="size-5" />
-          </a>
-        </div>
+          </div>
+          <p className="w-full text-center text-slate-400 my-4">
+            <span className="text-xl">&copy;</span> Judith Tamayo 2025
+          </p>
+        </footer>
       </div>
     </div>
   );
