@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="h-screen w-screen flex justify-end items-end shadow-lg"
+      className="h-screen w-screen flex justify-end items-end shadow-lg overflow-hidden"
     >
-      <div
+      <section
         id="hero"
         className="transition-all ease-in-out duration-50 relative w-4/5 inline-grid grid-rows-2 grid-cols-3"
       >
@@ -42,7 +42,7 @@ const Hero = () => {
         >
           <ContactInfo />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
