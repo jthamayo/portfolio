@@ -10,7 +10,9 @@ const Navbar = ({
   const isScrolled = useScrollStatus();
 
   const handleClick = () => {
-    handleOpen();
+    if(isOpen && window.innerWidth < 640){
+      handleOpen();
+    }
   };
 
   return (
@@ -20,7 +22,7 @@ const Navbar = ({
            isScrolled
              ? isOpen
                ? "-translate-y-0 sm:-translate-y-1/2 opacity-100"
-               : "-translate-y-10/7 sm:-translate-x-61"
+               : "max-sm:-translate-y-10/7 sm:-translate-x-61"
              : "sm:-translate-x-100 opacity-0"
          }`}
     >
@@ -72,7 +74,7 @@ const Navbar = ({
         <nav>
           <ul className="flex flex-col justify-center gap-2 text-start text-2xl font-extralight uppercase w-full">
             <li className="border-b-1 hover:shadow-lg hover:font-normal transition-all w-full">
-              <a href="#home" className="p-4 flex items-center justify-between">
+              <a href="#" className="p-4 flex items-center justify-between">
                 <p>Full</p>
                 <img
                   src="https://res.cloudinary.com/dw94v5tvs/image/upload/v1739394385/house-solid_wy4z2c.svg"
