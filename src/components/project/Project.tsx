@@ -11,8 +11,8 @@ interface ProjectProps {
 const Project = ({ title, subtitle, cover, description, link }: ProjectProps) => {
   return (
     <div className="mt-10 relative">
-      <div className="my-2 flex flex-col justify-stretch items-stretch md:flex-row">
-        <div className="flex h-1/2 flex-col md:w-2/3 md:pr-10">
+      <div className="my-2 flex flex-col justify-stretch items-stretch lg:flex-row">
+        <div className="flex h-1/2 flex-col lg:w-2/3 lg:pr-10">
           <div className="flex items-end mb-2 justify-between">
             <h4 className="text-2xl font-bold">{title}</h4>
             <h5 className="text-xl text-slate-700">{subtitle}</h5>
@@ -20,7 +20,7 @@ const Project = ({ title, subtitle, cover, description, link }: ProjectProps) =>
           <p className=" text-slate-500 text-justify">{description}</p>
         </div>
         <div
-          className="w-full mt-4 h-[200px] md:mt-0 md:w-2/5 md:h-auto @container/gallery"
+          className="w-full mt-4 h-[200px] lg:mt-0 lg:w-2/5 lg:h-auto @container/gallery"
         ><Gallery pictures={cover}/></div>
         <a href={link}></a>
       </div>

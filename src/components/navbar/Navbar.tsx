@@ -9,24 +9,28 @@ const Navbar = ({
 }) => {
   const isScrolled = useScrollStatus();
 
+  const handleClick = () => {
+    handleOpen();
+  };
+
   return (
     <div
-      className={`fixed bg-white h-screen w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all duration-500
+      className={`fixed bg-white h-screen w-screen sm:w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all duration-500
          ${
            isScrolled
              ? isOpen
-               ? "-translate-y-1/2"
-               : "-translate-x-61"
-             : "-translate-x-100"
+               ? "-translate-y-0 sm:-translate-y-1/2 opacity-100"
+               : "-translate-y-10/7 sm:-translate-x-61"
+             : "sm:-translate-x-100 opacity-0"
          }`}
     >
       <button
         onClick={handleOpen}
-        className="right-0 absolute size-15 flex items-center justify-center"
+        className={`right-0 absolute size-15 flex items-center justify-center ${
+          isOpen ? "" : "max-sm:bottom-0"
+        }`}
       >
-        <div
-          className={`h-6 w-7 top-4 flex flex-col gap-2 ${isOpen ? " " : ""}`}
-        >
+        <div className={`h-6 w-7 top-4 flex flex-col gap-2`}>
           <span
             className={`w-full h-0.5 bg-slate-800 transition-all ${
               isOpen ? "rotate-45 translate-y-2.5" : "rotate-0 translate-y-0"
@@ -45,7 +49,11 @@ const Navbar = ({
         </div>
       </button>
       <div className="flex h-screen w-full flex-col justify-center gap-5">
-        <header className="h-1/3 text-4xl flex flex-col text-center items-center justify-end pointer-events-none">
+        <header
+          className={`h-1/3 text-4xl flex flex-col text-center items-center justify-end pointer-events-none ${
+            isScrolled? "" : "opacity-0"
+          }`}
+        >
           <div className=" size-2/3 py-2">
             <img
               src="https://res.cloudinary.com/dw94v5tvs/image/upload/v1739394305/FotoPortada_vr7oh5.jpg"
@@ -55,7 +63,7 @@ const Navbar = ({
           </div>
           <h3
             className={`font-normal w-full uppercase transition-all ${
-              isOpen ? "-translate-x-0" : "-translate-x-10"
+              isOpen ? "-translate-x-0" : "sm:-translate-x-10"
             }`}
           >
             Judith Tamayo
@@ -77,6 +85,7 @@ const Navbar = ({
               <a
                 href="#stack"
                 className="p-4 flex items-center justify-between "
+                onClick={handleClick}
               >
                 <p>Stack</p>
                 <img
@@ -90,6 +99,7 @@ const Navbar = ({
               <a
                 href="#project"
                 className="p-4 flex items-center justify-between"
+                onClick={handleClick}
               >
                 <p>Developer</p>
                 <img
@@ -101,7 +111,11 @@ const Navbar = ({
             </li>
           </ul>
         </nav>
-        <footer className="w-full mt-auto">
+        <footer
+          className={`w-full mt-auto transition-all ${
+            isOpen ? "max-sm:translate-y-0" : "max-sm:-translate-y-20"
+          }`}
+        >
           <div className="flex items-end justify-center gap-10 w-full">
             <a href="mailto:jtamayobalogh@gmail.com">
               <img

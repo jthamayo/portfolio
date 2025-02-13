@@ -3,7 +3,7 @@ import { projectData } from "../../data/projectData";
 
 const ProjectShowcase = () => {
   return (
-    <section id="project" className="m-10 snap-y snap-proximity">
+    <section id="project" className="m-10 snap-y snap-proximity transition-all">
       <h3 className="pt-10 text-4xl tracking-widest uppercase font-light">Featured Projects</h3>
       <ol>
         {projectData.map((project, index) => {
