@@ -28,14 +28,6 @@ export const toolData = [
     logo: "devicon-vitejs-plain colored"
   },
   {
-    name: "mongoDB",
-    logo: "devicon-mongodb-plain colored"
-  },
-  {
-    name: "mySQL",
-    logo: "devicon-mysql-original colored"
-  },
-  {
     name: "trello",
     logo: "devicon-trello-plain colored"
   }

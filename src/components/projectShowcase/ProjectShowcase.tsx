@@ -14,7 +14,8 @@ const ProjectShowcase = () => {
                 subtitle={project.subtitle}
                 cover={project.cover}
                 description={project.description}
-                link={project.link}
+                repository={project.repository}
+                preview={project.preview}
               />
             </li>
           );

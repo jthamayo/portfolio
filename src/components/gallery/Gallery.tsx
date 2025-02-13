@@ -6,7 +6,7 @@ const Gallery = ({ pictures }: { pictures: string[] }) => {
 
   return (
     <>
-      <ol className="w-full h-full flex flex-col @2xs/gallery:flex-row justify-stretch gap-5 group">
+      <ol className="w-full h-full flex flex-col @2xs/gallery:flex-row justify-stretch gap-3 group">
         {pictures.map((picture, index) => {
           return (
             <li
@@ -26,13 +26,13 @@ const Gallery = ({ pictures }: { pictures: string[] }) => {
         })}
       </ol>
       <div
-        className={`p-1 fixed left-1/2 top-1/2 h-1/2 aspect-3/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center 
+        className={`p-1 fixed left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 max-sm:w-screen -translate-y-1/2 z-20 flex items-center justify-center 
           pointer-events-none
           ${isVisible ? "animate-popup" : ""}`}
       >
         {hoveredImage && (
           <div
-            className="w-full h-full bg-cover bg-center rounded-lg"
+            className="w-full h-full bg-contain bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${hoveredImage})` }}
           ></div>
         )}

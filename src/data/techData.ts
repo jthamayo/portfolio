@@ -46,5 +46,13 @@ export const techData = [
   {
     name: "laravel",
     logo: "devicon-laravel-original colored"
-  }
+  },
+  {
+    name: "mongoDB",
+    logo: "devicon-mongodb-plain colored"
+  },
+  {
+    name: "mySQL",
+    logo: "devicon-mysql-original colored"
+  },
 ];

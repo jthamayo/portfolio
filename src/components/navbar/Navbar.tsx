@@ -10,7 +10,7 @@ const Navbar = ({
   const isScrolled = useScrollStatus();
 
   const handleClick = () => {
-    if(isOpen && window.innerWidth < 640){
+    if (isOpen && window.innerWidth < 640) {
       handleOpen();
     }
   };
@@ -52,9 +52,9 @@ const Navbar = ({
       </button>
       <div className="flex h-screen w-full flex-col justify-center gap-5">
         <header
-          className={`h-1/3 text-4xl flex flex-col text-center items-center justify-end pointer-events-none ${
-            isScrolled? "" : "opacity-0"
-          }`}
+          className={`h-1/3 text-4xl flex flex-col text-center items-center justify-end pointer-events-none transition-all ${
+            isScrolled ? "" : "opacity-0"
+          } ${isOpen ? "-translate-x-0" : "sm:-translate-x-10"}`}
         >
           <div className=" size-2/3 py-2">
             <img
@@ -63,11 +63,7 @@ const Navbar = ({
               alt=""
             />
           </div>
-          <h3
-            className={`font-normal w-full uppercase transition-all ${
-              isOpen ? "-translate-x-0" : "sm:-translate-x-10"
-            }`}
-          >
+          <h3 className={`font-normal w-full uppercase transition-all `}>
             Judith Tamayo
           </h3>
         </header>
@@ -113,11 +109,15 @@ const Navbar = ({
             </li>
           </ul>
         </nav>
+
         <footer
-          className={`w-full mt-auto transition-all ${
+          className={`w-full mt-auto transition-all flex flex-col gap-5 items-center justify-between ${
             isOpen ? "max-sm:translate-y-0" : "max-sm:-translate-y-20"
           }`}
         >
+          <button className="w-1/2 uppercase text-white bg-indigo-300 hover:bg-white hover:text-indigo-400 hover:font-bold hover:border-indigo-400 transition-all border-1 px-4 py-1 rounded-2xl">
+            open CV
+          </button>
           <div className="flex items-end justify-center gap-10 w-full">
             <a href="mailto:jtamayobalogh@gmail.com">
               <img
