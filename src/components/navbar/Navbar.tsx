@@ -111,13 +111,11 @@ const Navbar = ({
         </nav>
 
         <footer
-          className={`w-full mt-auto transition-all flex flex-col gap-5 items-center justify-between ${
+          className={`w-full mt-auto transition-all ${
             isOpen ? "max-sm:translate-y-0" : "max-sm:-translate-y-20"
           }`}
         >
-          <button className="w-1/2 uppercase text-white bg-indigo-300 hover:bg-white hover:text-indigo-400 hover:font-bold hover:border-indigo-400 transition-all border-1 px-4 py-1 rounded-2xl">
-            open CV
-          </button>
+      
           <div className="flex items-end justify-center gap-10 w-full">
             <a href="mailto:jtamayobalogh@gmail.com">
               <img
