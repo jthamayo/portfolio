@@ -23,7 +23,7 @@ const Navbar = ({
              ? isOpen
                ? "-translate-y-0 sm:-translate-y-1/2 opacity-100"
                : "max-sm:-translate-y-10/7 sm:-translate-x-61"
-             : "sm:-translate-x-100 opacity-0"
+             : "-translate-x-100 max-sm:-translate-y-10/7 opacity-0"
          }`}
     >
       <button
@@ -115,7 +115,6 @@ const Navbar = ({
             isOpen ? "max-sm:translate-y-0" : "max-sm:-translate-y-20"
           }`}
         >
-      
           <div className="flex items-end justify-center gap-10 w-full">
             <a href="mailto:jtamayobalogh@gmail.com">
               <img
