@@ -5,7 +5,7 @@ import ProjectShowcase from "../projectShowcase/ProjectShowcase";
 import { useState } from "react";
 
 const Main = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);

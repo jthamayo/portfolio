@@ -28,7 +28,7 @@ export const projectData = [
     preview: "https://todo-list-nu-rose.vercel.app/",
   },
   {
-    title: "Only One Scapes",
+    title: "Only One Escapes",
     subtitle:
       "Mobile-first single-page application (SPA) game built using JavaScript, Bootstrap, the SweetAlert library, and Cloudinary for storage",
     description:

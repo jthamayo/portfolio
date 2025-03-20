@@ -9,6 +9,11 @@ const Navbar = ({
 }) => {
   const isScrolled = useScrollStatus();
 
+  const getNavbarHeightMobile = () =>{
+    console.log(window.innerHeight - 60);
+  }
+  getNavbarHeightMobile();
+
   const handleClick = () => {
     if (isOpen && window.innerWidth < 640) {
       handleOpen();
@@ -17,7 +22,7 @@ const Navbar = ({
 
   return (
     <div
-      className={`fixed bg-white h-screen w-screen sm:w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all duration-500
+      className={`fixed bg-white h-full w-full sm:w-[300px] left-0 top-1/2 -translate-y-1/2 shadow-lg z-100 transition-all duration-500
          ${
            isScrolled
              ? isOpen
